@@ -15,20 +15,154 @@
 
 <body>
     <!-- Header Area Start -->
-    <header>
-
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-3">
+                <div class="banner-image">
+                    <img src="images/Banner-Image.png" alt="">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9">
+                <div class="header-text">
+                    <h1>MAKE YOUR FOOTBALL TEAM</h1>
+                    <p>It's time to make your own football team. Let's buy the world's best footballers and ensure the next FIFA world cup.</p>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- Header Area End -->
 
     <!-- Main Area Start -->
-    <main>
+    <main class="container">
+        <div class="row">
+            <!-- All Players Area Start -->
+            <div class="col-md-8 col-sm-12">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <!-- Player 1 -->
+                        <div class="card">
+                            <img src="images/Zidane.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Zidane</h5>
+                                <p class="card-text">50 Goals <span>-</span>150 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Player 2 -->
+                        <div class="card">
+                            <img src="images/Messi.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Messi</h5>
+                                <p class="card-text">120 Goals <span>-</span>170 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Player 3 -->
+                        <div class="card">
+                            <img src="images/Mbappe.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Mbappe</h5>
+                                <p class="card-text">70 Goals <span>-</span>100 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Player 4 -->
+                        <div class="card">
+                            <img src="images/Neymar.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Neymar</h5>
+                                <p class="card-text">80 Goals <span>-</span>110 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Player 5 -->
+                        <div class="card">
+                            <img src="images/Ramos.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Ramos</h5>
+                                <p class="card-text">60 Goals <span>-</span>80 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Player 6 -->
+                        <div class="card">
+                            <img src="images/Forlan.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Forlan</h5>
+                                <p class="card-text">130 Goals <span>-</span>170 Assist</p>
+                                <a href="#" class="btn btn-primary">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- All Players Area End -->
 
+            <!-- Team Calculation Area Start -->
+            <div class="col-md-4 col-sm-12">
+                <div class="row">
+                    <!-- Selected Players Area Start -->
+                    <div class="col-md-12 selected-players-area">
+                        <div>
+                            <h2>Selected - V</h2>
+                            <ol>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Selected Players Area End -->
+
+                    <!-- Budget Area Start -->
+                    <div class="col-md-12 budget-area">
+                        <div>
+                            <h2>Budget</h2>
+                        </div>
+                        <div>
+                            <label><b>Per Player:</b></label>
+                            <input type="text">
+                            <button id="btn-calculate" type="button" class="btn btn-primary">Calculate</button>
+                        </div>
+                        <div>
+                            <p><b>Player Expense:</b> <span>0</span></p>
+                        </div>
+                        <div>
+                            <label><b>Manager:</b></label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label><b>Coatch:</b></label>
+                            <input type="text">
+                            <button id="btn-calculate-total" type="button" class="btn btn-primary">Calculate Total</button>
+                        </div>
+                        <div>
+                            <p><b>Total:</b> <span>0</span></p>
+                        </div>
+                    </div>
+                    <!-- Budget Area End -->
+                </div>
+            </div>
+            <!-- Team Calculation Area End -->
+        </div>
     </main>
     <!-- Main Area End -->
 
     <!-- Footer Area Start -->
     <footer>
-
+        <p>Copyright @ 2022 All Rights Reserved.</p>
     </footer>
     <!-- Footer Area End -->
 
