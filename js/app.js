@@ -1,23 +1,34 @@
 
 const myTeamPlayers = [];
 
-function displaySelectedPlayers(){
+function displaySelectedPlayers(players){
 
+    const selectedPlayersList = document.getElementById('selected-players-list');
     
+    selectedPlayersList.innerHTML = '';
 
+    for(let i = 0; i < players.length; i++){
+
+        const myPlayers = myTeamPlayers[i];
+       
+        const playerList = document.createElement('p');
+
+        playerList.innerHTML = `
+            <span>${i + 1}.</span>
+            <span>${myPlayers}</span>
+
+        `;
+
+        console.log(myPlayers);
+        selectedPlayersList.appendChild(playerList);
+    }
 }
 
 function selectPlayer(element){
 
-    //console.log(element.parentNode.children[0].innerText);
-
     const selectedPlayers = element.parentNode.children[0].innerText;
-    
-    //console.log(selectedPlayers);
 
     myTeamPlayers.push(selectedPlayers);
-
-   //console.log(myTeamPlayers);
 
     if (myTeamPlayers.length >=6 ){
 
@@ -26,5 +37,4 @@ function selectPlayer(element){
    }
 
     displaySelectedPlayers(myTeamPlayers);
-
 }
