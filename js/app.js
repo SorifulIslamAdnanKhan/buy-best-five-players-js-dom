@@ -44,9 +44,7 @@ function selectPlayer(element){
 
 document.getElementById('btn-calculate').addEventListener('click', function (){
 
-    const budgetElement = document.getElementById('budget-element');
-    const budgetElementString = budgetElement.value;
-    const budget = parseFloat(budgetElementString);
+    const budget = getInputFiledvalueById('budget-element');
 
     if (isNaN(budget) === true || budget <= 0 || budget === ''){
         
@@ -58,6 +56,33 @@ document.getElementById('btn-calculate').addEventListener('click', function (){
 
     const totalPlayerCost = budget * selectedPlayersList;
 
-    const totalPlayerExpense = document.getElementById('total-player-expense');
-    totalPlayerExpense.innerText = totalPlayerCost;
+    setTextElement('total-player-expense', totalPlayerCost);
+
 })
+
+
+document.getElementById('btn-calculate-total').addEventListener('click', function(){
+
+    const managerCost = getInputFiledvalueById('manager-cost');
+
+    if (isNaN(managerCost) === true || managerCost <= 0 || managerCost === '') {
+
+        alert('Please insert a valid number.');
+        return;
+    }
+    
+    const coachCost = getInputFiledvalueById('coach-cost');
+
+    if (isNaN(coachCost) === true || coachCost <= 0 || coachCost === '') {
+
+        alert('Please give a valid number.');
+        return;
+    }
+
+    const totalPlayerExpense = getTextElementById('total-player-expense');
+
+    const totalTeamCost = totalPlayerExpense + managerCost + coachCost;
+
+    setTextElement('total-team-cost', totalTeamCost);
+})
+
