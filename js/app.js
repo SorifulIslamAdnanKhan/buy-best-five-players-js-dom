@@ -14,17 +14,20 @@ function displaySelectedPlayers(players){
         const playerList = document.createElement('p');
 
         playerList.innerHTML = `
+
             <span>${i + 1}.</span>
             <span>${myPlayers}</span>
 
         `;
 
-        console.log(myPlayers);
         selectedPlayersList.appendChild(playerList);
+
     }
 }
 
 function selectPlayer(element){
+
+    element.disabled = true;
 
     const selectedPlayers = element.parentNode.children[0].innerText;
 
@@ -38,3 +41,23 @@ function selectPlayer(element){
 
     displaySelectedPlayers(myTeamPlayers);
 }
+
+document.getElementById('btn-calculate').addEventListener('click', function (){
+
+    const budgetElement = document.getElementById('budget-element');
+    const budgetElementString = budgetElement.value;
+    const budget = parseFloat(budgetElementString);
+
+    if (isNaN(budget) === true || budget <= 0 || budget === ''){
+        
+        alert ('Please provide a valid number.');
+        return;
+    }
+
+    const selectedPlayersList = document.getElementById('selected-players-list').childNodes.length;
+
+    const totalPlayerCost = budget * selectedPlayersList;
+
+    const totalPlayerExpense = document.getElementById('total-player-expense');
+    totalPlayerExpense.innerText = totalPlayerCost;
+})
