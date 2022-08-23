@@ -44,7 +44,10 @@ main{
 .budget-area p, input, button{
     margin-top: 15px;
 }
-
+.total-cost{
+    font-weight: 700;
+    color: #FF7F50;
+}
 /* Footer Styles */
 
 footer{
